@@ -11,7 +11,7 @@ st.set_page_config(page_title="Analyse de la distribution normale", layout="cent
 
 st.title("Analyse de la distribution normale d'une variable")
 
-st.markdown("<h4>Importez votre fichier au format (.csv) :</h4>", unsafe_allow_html=false)
+st.markdown("<h4>Importez votre fichier au format (.csv) :</h4>", unsafe_allow_html=True)
 uploaded_file = st.file_uploader("", type="csv")
 
 if uploaded_file is not None:
