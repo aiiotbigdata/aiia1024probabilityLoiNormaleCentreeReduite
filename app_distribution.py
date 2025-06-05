@@ -11,10 +11,7 @@ st.set_page_config(page_title="Analyse de la distribution normale", layout="cent
 
 st.title("Analyse de la distribution normale d'une variable")
 
-st.markdown(
-    "<h4><b>Importez votre fichier au format (.csv)</b></h4>",
-    unsafe_allow_html=True
-)
+st.markdown("<h4><b>Importez votre fichier au format (.csv)</b></h4>", unsafe_allow_html=True)
 uploaded_file = st.file_uploader("", type="csv")
 
 if uploaded_file is not None:
@@ -22,7 +19,8 @@ if uploaded_file is not None:
     colonnes_numeriques = df.select_dtypes(include=np.number).columns.tolist()
 
     if colonnes_numeriques:
-        colonne = st.selectbox("<h4><b>Choisissez la variable numérique :</b></h4>", colonnes_numeriques)
+        st.markdown("<h4><b>Choisissez la variable numérique :</b></h4>", unsafe_allow_html=True)
+        colonne = st.selectbox("", colonnes_numeriques)
         valeurs = df[colonne].dropna()
 
         # Paramètres d'analyse
@@ -32,7 +30,7 @@ if uploaded_file is not None:
         st.write(f"Moyenne : **{moyenne:.2f}**, Écart-type : **{ecart_type:.2f}**")
         st.write(f"Min : {min_val:.2f}, Max : {max_val:.2f}")
 
-        st.markdown("<h4><b>Ajouter des intervalles (a, b)</b></h4>", unsafe_allow_html=True)
+        st.markdown("<h4><b>Ajouter des intervalles (a, b) :</b></h4>", unsafe_allow_html=True)
         with st.expander("", expanded=True):
             bornes = []
             for i in range(1, 4):
