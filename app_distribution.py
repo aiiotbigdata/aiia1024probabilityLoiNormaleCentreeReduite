@@ -22,7 +22,7 @@ if uploaded_file is not None:
     colonnes_numeriques = df.select_dtypes(include=np.number).columns.tolist()
 
     if colonnes_numeriques:
-        colonne = st.selectbox("Choisissez la variable numérique :", colonnes_numeriques)
+        colonne = st.selectbox("**Choisissez la variable numérique :**", colonnes_numeriques)
         valeurs = df[colonne].dropna()
 
         # Paramètres d'analyse
