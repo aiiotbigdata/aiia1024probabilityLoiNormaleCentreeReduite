@@ -33,7 +33,6 @@ if uploaded_file is not None:
         st.write(f"Min : {min_val:.2f}, Max : {max_val:.2f}")
 
         st.markdown("<h4><b>Ajouter des intervalles (a, b)</b></h4>", unsafe_allow_html=True)
-        
         with st.expander("", expanded=True):
             bornes = []
             for i in range(1, 4):
