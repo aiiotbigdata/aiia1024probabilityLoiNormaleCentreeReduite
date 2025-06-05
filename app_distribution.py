@@ -7,11 +7,11 @@ from scipy.stats import norm
 import json
 import io
 
-st.set_page_config(page_title="Analyse de Distribution Normale", layout="centered")
+st.set_page_config(page_title="Analyse de la distribution normale", layout="centered")
 
 st.title("Analyse de la distribution normale d'une variable")
 
-uploaded_file = st.file_uploader("Importez votre fichier au format (.csv)", type="csv")
+uploaded_file = st.file_uploader("**Importez votre fichier au format (.csv)**", type="csv")
 
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
