@@ -11,7 +11,11 @@ st.set_page_config(page_title="Analyse de la distribution normale", layout="cent
 
 st.title("Analyse de la distribution normale d'une variable")
 
-uploaded_file = st.file_uploader("**Importez votre fichier au format (.csv)**", type="csv")
+st.markdown(
+    "<h4><b>**Importez votre fichier au format (.csv)**</b></h4>",
+    unsafe_allow_html=True
+)
+uploaded_file = st.file_uploader("", type="csv")
 
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
