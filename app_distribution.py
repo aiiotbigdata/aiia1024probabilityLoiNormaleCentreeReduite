@@ -32,7 +32,7 @@ if uploaded_file is not None:
         st.write(f"Moyenne : **{moyenne:.2f}**, Écart-type : **{ecart_type:.2f}**")
         st.write(f"Min : {min_val:.2f}, Max : {max_val:.2f}")
 
-        with st.expander("Ajouter des intervalles (a, b)", expanded=True):
+        with st.expander("**Ajouter des intervalles (a, b)**", expanded=True):
             bornes = []
             for i in range(1, 4):
                 col1, col2 = st.columns(2)
